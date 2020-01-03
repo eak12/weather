@@ -6,7 +6,7 @@
 #loaded via a namespace (and not attached):Rcpp_0.12.7, RColorBrewer_1.1-2, plyr_1.8.4, iterators_1.0.8, tools_3.3.2, jsonlite_1.1, tibble_1.2, mrupdate_1.0.0, gtable_0.2.0, Matrix_1.2-7.1, foreach_1.4.3, DBI_0.5-1, CompatibilityAPI_1.1.0 curl_2.2, gridExtra_2.2.1, cluster_2.0.5, nnet_7.3-12, grid_3.3.2, data.table_1.9.6, R6_2.2.0, foreign_0.8-67, latticeExtra_0.6-28, magrittr_1.5, scales_0.4.0, codetools_0.2-15, splines_3.3.2, assertthat_0.1, colorspace_1.2-7, labeling_0.3, stringi_1.1.2, acepack_1.4.1, lazyeval_0.2.0, munsell_0.4.3, chron_2.3-47
 
 
-setwd("C:/Users/Elias/Desktop/weather")
+setwd("C:/Users/Elias/Desktop/weather/weather")
 
 #2. step two - read the csv file
 
