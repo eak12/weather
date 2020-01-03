@@ -11,3 +11,5 @@ setwd("C:/Users/Elias/Desktop/weather")
 #2. step two - read the csv file
 
 weather<-read.csv("../weather/weather.csv")
+#2. step three - remove leap days 
+not_leap_days<-weather[weather$Date!="2012-02-29" & weather$Date!="2008-02-29" ,]
