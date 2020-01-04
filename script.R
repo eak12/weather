@@ -13,3 +13,7 @@ setwd("C:/Users/Elias/Desktop/weather/weather")
 weather<-read.csv("../weather/weather.csv")
 #2. step three - remove leap days 
 not_leap_days<-weather[weather$Date!="2012-02-29" & weather$Date!="2008-02-29" ,]
+
+#3.You need to take the max of the TMAX and the min of the TMIN records, for each day
+#remove 2015 year first from dates
+#len is 352 days
