@@ -30,16 +30,27 @@ For this assignment, you must:
 4. Make the visual nice! Leverage principles from the first module in this course when developing your solution. Consider issues such as legends, labels, and chart junk.
 
 
-```{r cars}
-summary(cars)
-```
-
 ## Synopsis
+
+I read the csv file called 'weather.csv,' removed the leap days, converted the named column 'Date' to a standard Date data type.
+
+## Processing
 
 You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+#1. step one - set working directory
+library(lubridate)
+setwd("C:/Users/Elias/Desktop/weather/weather")
+
+#2. step two - read the csv file
+
+weather<-read.csv("../weather/weather.csv")
+#2. step three - remove leap days 
+not_leap_days<-weather[weather$Date!="2012-02-29" & weather$Date!="2008-02-29" ,]
+
+
+#not_leap_days$Date<-not_leap_days$Date
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+

@@ -192,7 +192,6 @@ $(document).ready(function () {
 </div>
 
 
-<p><code>{r setup, include=FALSE} knitr::opts_chunk$set(echo = TRUE)</code></p>
 <div id="assignment-2" class="section level1">
 <h1>Assignment 2</h1>
 <p>An NOAA dataset has been stored in the file <code>weather.csv</code>. This is the dataset to use for this assignment. Note: The data for this assignment comes from a subset of The National Centers for Environmental Information (NCEI) <a href="https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt">Daily Global Historical Climatology Network</a> (GHCN-Daily). The GHCN-Daily is comprised of daily climate records from thousands of land surface stations across the globe.</p>
@@ -215,12 +214,20 @@ $(document).ready(function () {
 <li>Watch out for leap days (i.e. February 29th), it is reasonable to remove these points from the dataset for the purpose of this visualization.</li>
 <li>Make the visual nice! Leverage principles from the first module in this course when developing your solution. Consider issues such as legends, labels, and chart junk.</li>
 </ol>
-<p><code>{r cars} summary(cars)</code></p>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
+<div id="synopsis" class="section level2">
+<h2>Synopsis</h2>
+<p>I read the csv file called ‘weather.csv,’ removed the leap days, converted the named column ‘Date’ to a standard Date data type.</p>
+</div>
+<div id="processing" class="section level2">
+<h2>Processing</h2>
 <p>You can also embed plots, for example:</p>
-<p><code>{r pressure, echo=FALSE} plot(pressure)</code></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+<pre><code>##            ID       Date Element Data_Value
+## 1 USW00094889 2014-11-12    TMAX         22
+## 2 USC00208972 2009-04-29    TMIN         56
+## 3 USC00200032 2008-05-26    TMAX        278
+## 4 USC00205563 2005-11-11    TMAX        139
+## 5 USC00200230 2014-02-27    TMAX       -106
+## 6 USW00014833 2010-10-01    TMAX        194</code></pre>
 </div>
 </div>
 
