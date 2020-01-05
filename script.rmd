@@ -46,11 +46,16 @@ setwd("C:/Users/Elias/Desktop/weather/weather")
 #2. step two - read the csv file
 
 weather<-read.csv("../weather/weather.csv")
+
+#3. changed the date format from factor to Date for the column Date
+weather$Date<-ymd(weather$Date)
 #2. step three - remove leap days 
 not_leap_days<-weather[weather$Date!="2012-02-29" & weather$Date!="2008-02-29" ,]
 
 
 #not_leap_days$Date<-not_leap_days$Date
+
+
 ```
 
 
