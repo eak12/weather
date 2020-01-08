@@ -50,28 +50,31 @@ weather<-read.csv("../weather/weather.csv")
 #3. changed the date format from factor to Date for the column Date
 weather$Date<-ymd(weather$Date)
 
+
 #4. get the year Date column
 weather$'year'<-year(weather$Date)
 
 #5. remove leap days
 weather$'month'<-month(weather$Date)
-#test
-table(weather$month)
-head(weather)
-weather$'dayofyear'<-yday(weather$Date)
+#weather$'dayofyear'<-yday(weather$Date)
 weather$'dayofmonth'<-day(weather$Date)
-table(weather$day)
-head(weather)
+
 
 #expect 165002 rows found using nrow(rm_leap)
 
 rm_leap<-weather[!(weather$dayofmonth==29 & weather$month==2),]
-nrow(rm_leap)
+
 
 #rm_leap not contain 29 for table(weather$day)
-#5. create a dataframe where the year 2005 has been removed
-df_2005to2014<-weather[weather$year!=2015,]
+#6. create a dataframe where the year 2005 has been removed
+df_2005to2014<-rm_leap[rm_leap$year!=2015,]
 
+
+#7.change Date column's year to only 2015
+year(df_2005to2014$Date)<-2015
+#test date of year only 2015
+df_2005to2014$year<-year(df_2005to2014$Date)
+table(df_2005to2014$year)
 
 
 ```
