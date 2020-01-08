@@ -56,7 +56,7 @@ weather$'year'<-year(weather$Date)
 
 #5. remove leap days
 weather$'month'<-month(weather$Date)
-#weather$'dayofyear'<-yday(weather$Date)
+
 weather$'dayofmonth'<-day(weather$Date)
 
 
@@ -76,7 +76,10 @@ year(df_2005to2014$Date)<-2015
 df_2005to2014$year<-year(df_2005to2014$Date)
 table(df_2005to2014$year)
 
-
+#8. create day of year column
+df_2005to2014$'dayofyear'<-yday(df_2005to2014$Date)
+#expect 365 days of day of year
+table(df_2005to2014$dayofyear)
 ```
 
 
