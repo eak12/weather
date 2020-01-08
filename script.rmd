@@ -72,14 +72,19 @@ df_2005to2014<-rm_leap[rm_leap$year!=2015,]
 
 #7.change Date column's year to only 2015
 year(df_2005to2014$Date)<-2015
-#test date of year only 2015
+
 df_2005to2014$year<-year(df_2005to2014$Date)
-table(df_2005to2014$year)
+
 
 #8. create day of year column
 df_2005to2014$'dayofyear'<-yday(df_2005to2014$Date)
-#expect 365 days of day of year
-table(df_2005to2014$dayofyear)
+
+
+#get the celsius from tenth celsius
+#expect the max to be 40.6 where this number was found using max(df_2005to2014$Data_Value)
+#expect the min to be -30.6 where this number was found using min(df_2005to2014$Data_Value)
+df_2005to2014$Data_Value<-(df_2005to2014$Data_Value)*0.1
+#it passed the tests
 ```
 
 
