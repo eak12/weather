@@ -53,6 +53,10 @@ weather$Date<-ymd(weather$Date)
 #4. get the year Date column
 weather$'year'<-year(weather$Date)
 
+#5. create a dataframe where the year 2005 has been removed
+df_2005to2014<-weather[weather$year!=2015,]
+table(df_2005to2014$year)
+
 #2. step three - remove leap days 
 not_leap_days<-weather[weather$Date!="2012-02-29" & weather$Date!="2008-02-29" ,]
 
